@@ -1,0 +1,4 @@
+litellm
+SpeechRecognition
+pyttsx3
+pyaudio
