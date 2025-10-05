@@ -1,0 +1,70 @@
+Example 1 — AI Cooker Agent Simulation
+Setup Prompt:
+I’d like to simulate my AI Cooker agent.
+Goals: cook the user’s recipe, check ingredients, ask approval, cook step by step.
+Actions: get_recipe(), check_ingredients(), ask_approval(), cook_step(), serve_dish().
+At each step, give only one action. I’ll reply with the result.
+Ask me for the first task to perform.
+Simulation Run:
+Agent: Hello! I’m your AI Cooker 🍳 What recipe would you like to cook?
+Action: get_recipe()
+Environment: The user wants to cook “vegetable fried rice.”
+Result: {"recipe_name": "vegetable fried rice"}
+Agent: Let’s check if you have all the ingredients!
+Action: check_ingredients("vegetable fried rice")
+Environment: You have rice, carrots, peas, and soy sauce but no eggs.
+Result: {"missing": ["eggs"]}
+Agent: Eggs are missing. Would you like to continue without them or add tofu instead?
+Action: ask_approval("Use tofu instead of eggs?")
+Environment: The user approves.
+Result: {"approved": true}
+Agent: Great! Starting to cook step by step 🍚
+Action: cook_step("boil rice")
+Environment: Rice boiled successfully.
+Result: {"status": "ok"}
+Agent: Awesome! Next step: fry vegetables.
+Action: cook_step("fry vegetables")
+Environment: Vegetables fried successfully.
+Result: {"status": "ok"}
+Agent: All steps complete!
+Action: serve_dish()
+Environment: Dish served successfully 🍽️
+Result: {"status": "done"}
+Agent: Cooking complete. Enjoy your meal!
+________________________________________
+🪴 Example 2 — Smart Gardener Agent Simulation
+Setup Prompt:
+I’d like to simulate my Smart Gardener agent.
+Goals: keep plants healthy by watering, checking soil, and pruning.
+Actions: check_moisture(), water_plant(), prune_plant(), ask_user().
+Simulation Run:
+Agent: Checking the soil moisture for rose plant.
+Action: check_moisture("rose")
+Environment: Moisture level: 15% (too dry).
+Result: {"moisture": 15}
+Agent: Soil is dry. I’ll water the plant with 2 liters.
+Action: water_plant("rose", 2)
+Environment: Plant watered successfully.
+Result: {"status": "ok"}
+Agent: Great! Rose plant is healthy now 🌹
+________________________________________
+🧹 Example 3 — Smart Cleaner Agent Simulation
+Setup Prompt:
+I’d like to simulate my Smart Cleaner agent.
+Goals: detect dirty areas, clean efficiently, avoid valuable items.
+Actions: scan_room(), identify_dirt(), clean_area(), avoid_object(), report_status().
+Simulation Run:
+Agent: Scanning the room for dust and clutter.
+Action: scan_room()
+Environment: Found dust near the window and papers on the floor.
+Result: {"dirt": ["window area"], "objects": ["papers"]}
+Agent: Papers might be important. Avoiding them.
+Action: avoid_object("papers")
+Environment: Papers left untouched.
+Result: {"status": "ok"}
+Agent: Cleaning dust near the window.
+Action: clean_area("window area")
+Environment: Window area cleaned successfully.
+Result: {"status": "ok"}
+Agent: Room is clean. Task complete 🧽
+
